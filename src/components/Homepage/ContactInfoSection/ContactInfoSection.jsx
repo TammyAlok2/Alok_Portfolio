@@ -40,60 +40,6 @@ const socialLinks = [
 ]
 
 export default function ContactInfoSection() {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-  
-    const formData = new FormData(e.currentTarget);
-    const data = {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      subject: formData.get('subject'),
-      message: formData.get('message'),
-    };
-  
-    try {
-      // Option 1: Use the correct Formspree format
-      const response = await fetch('https://formspree.io/f/2676621703529888870', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-  
-      // Option 2: Use your custom API endpoint (if you've implemented it)
-      // const response = await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify(data),
-      // });
-  
-      if (response.ok) {
-        toast({
-          title: "Message sent!",
-          description: "Thank you for reaching out. I'll respond as soon as possible.",
-        });
-        // Reset the form
-        e.target.reset();
-      } else {
-        throw new Error('Failed to send message');
-      }
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Failed to send message. Please try again.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <section className="py-20 dark:from-gray-900 dark:to-gray-800" id="contact">
@@ -148,53 +94,58 @@ export default function ContactInfoSection() {
             <Card>
               <CardContent className="p-6">
                 <h3 className="text-2xl font-semibold mb-6">Send Me a Message</h3>
-                <form className="space-y-4" onSubmit={handleSubmit}>
+                <form className="space-y-4" action="https://formsubmit.co/a09d451665ae435cf961b6e9d24d903f"
+                  method="POST">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <label className="text-sm font-medium" htmlFor="name">Name</label>
-                      <Input 
-                        id="name" 
-                        name="name" 
-                        placeholder="Your name" 
-                        required 
+                      <Input
+                        id="name"
+                        name="name"
+                        placeholder="Your name"
+                        required
                       />
                     </div>
                     <div className="space-y-2">
                       <label className="text-sm font-medium" htmlFor="email">Email</label>
-                      <Input 
+                      <Input
                         id="email"
                         name="email"
-                        type="email" 
-                        placeholder="your@email.com" 
+                        type="email"
+                        placeholder="your@email.com"
                         required
                       />
                     </div>
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-medium" htmlFor="subject">Subject</label>
-                    <Input 
+                    <Input
                       id="subject"
                       name="subject"
-                      placeholder="How can I help you?" 
+                      placeholder="How can I help you?"
                       required
                     />
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-medium" htmlFor="message">Message</label>
-                    <Textarea 
+                    <Textarea
                       id="message"
                       name="message"
-                      placeholder="Your message here..." 
-                      className="min-h-[150px]" 
+                      placeholder="Your message here..."
+                      className="min-h-[150px]"
                       required
                     />
                   </div>
-                  <Button 
-                    type="submit" 
+
+                  {/* Hidden Fields for FormSubmit Features */}
+                  <input type="hidden" name="_next" value="https://pavan-updated-portfolio.vercel.app/" />
+                  <input type="hidden" name="_captcha" value="false" />
+
+                  <Button
+                    type="submit"
                     className="w-full"
-                    disabled={isSubmitting}
                   >
-                    {isSubmitting ? "Sending..." : "Send Message"}
+                    {"Send Message"}
                   </Button>
                 </form>
               </CardContent>

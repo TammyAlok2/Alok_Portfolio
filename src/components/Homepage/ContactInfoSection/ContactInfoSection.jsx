@@ -143,7 +143,7 @@ export default function ContactInfoSection() {
 
                   <Button
                     type="submit"
-                    className="w-full"
+                    className="w-full bg-gradient-to-r font-bold text-md from-blue-400 to-purple-500"
                   >
                     {"Send Message"}
                   </Button>

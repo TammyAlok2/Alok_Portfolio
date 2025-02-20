@@ -43,7 +43,7 @@ const ProjectsSection = () => {
     const [selectedProject, setSelectedProject] = useState(null);
 
     return (
-        <section className="py-20 bg-gray-50" id='projects'>
+        <section className="py-20" id='projects'>
             <div className="max-w-7xl mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -51,7 +51,7 @@ const ProjectsSection = () => {
                     transition={{ duration: 0.5 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
+                    <h2 className="text-4xl font-bold mb-4 text-[#3a59eb]">Featured Projects</h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
                         Showcase of my latest work and projects across different domains
                     </p>
@@ -66,7 +66,7 @@ const ProjectsSection = () => {
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                         >
                             <Card
-                                className="cursor-pointer group hover:shadow-xl transition-all duration-300"
+                                className="cursor-pointer group hover:shadow-xl transition-all duration-300 max-md:w-[80%]"
                                 onClick={() => setSelectedProject(project)}
                             >
                                 <CardContent className="p-0">

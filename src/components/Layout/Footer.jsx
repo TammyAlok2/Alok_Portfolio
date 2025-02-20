@@ -25,7 +25,7 @@ const Footer = () => {
 
   return (
     <motion.footer 
-      className="w-full py-8 bg-gray-900 text-gray-100"
+      className="w-full py-8 bg-gradient-to-r from-[#60a5fa69] to-[#a855f761] text-gray-900 border-t-[2rem] border-indigo-300 rounded-t-full"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -40,7 +40,7 @@ const Footer = () => {
         </motion.h3>
         
         <motion.p 
-          className="text-gray-300 mb-6 max-w-md"
+          className="text-gray-800 mb-6 max-w-md"
           variants={itemVariants}
         >
           Thank you for visiting my portfolio. I'm always open to new opportunities and collaborations.
@@ -68,7 +68,7 @@ const Footer = () => {
         </motion.div>
         
         <motion.div 
-          className="text-sm text-gray-400"
+          className="text-sm text-gray-700"
           variants={itemVariants}
         >
           © {currentYear} Your Name. All rights reserved.

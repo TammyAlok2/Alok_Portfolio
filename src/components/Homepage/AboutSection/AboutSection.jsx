@@ -7,7 +7,7 @@ import { ArrowRight, Github, Linkedin, Twitter } from "lucide-react"
 export default function AboutSection() {
     return (
         <section className="bg-gradient-to-b py-20 dark:from-gray-900 dark:to-gray-800" id="about">
-            <div className="container mx-auto px-4">
+            <div className="mx-auto px-4">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 // ... (previous Home component code remains the same until main closing tag)
 export const ServicesSection = () => {
     return (
-        <section className="py-20 bg-gradient-to-b from-white to-gray-50" id='services'>
+        <section className="py-20" id='services'>
             <div className="max-w-7xl mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

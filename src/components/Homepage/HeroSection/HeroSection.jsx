@@ -86,7 +86,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, scale: 0.8, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.5, repeat: Infinity, repeatDelay: 4 }}
-              className={`relative ${exp.position} flex items-center gap-2 bg-[#00000026] text-black font-semibold shadow-lg border [text-shadow:0_0.05rem_0_black] px-4 py-2 rounded-full`}
+              className={`relative ${exp.position} flex items-center gap-2 bg-[#00000026] text-black font-semibold shadow-lg border [text-shadow:0_0.02rem_0_white] px-4 py-2 rounded-full`}
             >
               {exp?.icon}
               {exp?.name}

@@ -1,11 +1,13 @@
 'use client';
 
 import { motion } from "framer-motion"
-import { Mail, MapPin, Phone, Clock, ExternalLink, Linkedin, Twitter, Github } from "lucide-react"
+import { Mail, MapPin, Phone, ExternalLink, Linkedin, Twitter, Github } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
+import { useToast } from "@/hooks/use-toast"
+import { useState } from "react"
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -38,6 +40,61 @@ const socialLinks = [
 ]
 
 export default function ContactInfoSection() {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+  
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      subject: formData.get('subject'),
+      message: formData.get('message'),
+    };
+  
+    try {
+      // Option 1: Use the correct Formspree format
+      const response = await fetch('https://formspree.io/f/2676621703529888870', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+  
+      // Option 2: Use your custom API endpoint (if you've implemented it)
+      // const response = await fetch('/api/contact', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify(data),
+      // });
+  
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for reaching out. I'll respond as soon as possible.",
+        });
+        // Reset the form
+        e.target.reset();
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section className="py-20 dark:from-gray-900 dark:to-gray-800" id="contact">
       <div className="container mx-auto px-4">
@@ -91,30 +148,57 @@ export default function ContactInfoSection() {
             <Card>
               <CardContent className="p-6">
                 <h3 className="text-2xl font-semibold mb-6">Send Me a Message</h3>
-                <form className="space-y-4">
+                <form className="space-y-4" onSubmit={handleSubmit}>
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <label className="text-sm font-medium">Name</label>
-                      <Input placeholder="Your name" />
+                      <label className="text-sm font-medium" htmlFor="name">Name</label>
+                      <Input 
+                        id="name" 
+                        name="name" 
+                        placeholder="Your name" 
+                        required 
+                      />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-sm font-medium">Email</label>
-                      <Input type="email" placeholder="your@email.com" />
+                      <label className="text-sm font-medium" htmlFor="email">Email</label>
+                      <Input 
+                        id="email"
+                        name="email"
+                        type="email" 
+                        placeholder="your@email.com" 
+                        required
+                      />
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-medium">Subject</label>
-                    <Input placeholder="How can I help you?" />
+                    <label className="text-sm font-medium" htmlFor="subject">Subject</label>
+                    <Input 
+                      id="subject"
+                      name="subject"
+                      placeholder="How can I help you?" 
+                      required
+                    />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-medium">Message</label>
-                    <Textarea placeholder="Your message here..." className="min-h-[150px]" />
+                    <label className="text-sm font-medium" htmlFor="message">Message</label>
+                    <Textarea 
+                      id="message"
+                      name="message"
+                      placeholder="Your message here..." 
+                      className="min-h-[150px]" 
+                      required
+                    />
                   </div>
-                  <Button className="w-full">Send Message</Button>
+                  <Button 
+                    type="submit" 
+                    className="w-full"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? "Sending..." : "Send Message"}
+                  </Button>
                 </form>
               </CardContent>
             </Card>
-
           </motion.div>
 
           <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
@@ -151,4 +235,3 @@ export default function ContactInfoSection() {
     </section>
   )
 }
-

@@ -32,11 +32,11 @@ const HeroSection = () => {
         </div>
 
         {/* Main Heading */}
-        <div className="space-y-1 w-[90%] max-md:hidden">
+        <div className="space-y-1 w-[90%] max-[768px]:hidden">
           <FlipWords words={words} /> <br />
         </div>
 
-        <div className="space-y-1 font-bold text-[2.2rem] [text-shadow:0.02rem_0.01rem_0.02rem_black] w-[90%] min-md:hidden">
+        <div className="space-y-1 font-bold text-[2.2rem] [text-shadow:0.02rem_0.01rem_0.02rem_black] w-[90%] min-[768px]:hidden">
           <h1>Frontend Developer</h1>
         </div>
 

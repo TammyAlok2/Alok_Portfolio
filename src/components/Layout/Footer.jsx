@@ -25,7 +25,7 @@ const Footer = () => {
 
   return (
     <motion.footer 
-      className="w-full py-8 bg-gradient-to-r from-[#60a5fa69] to-[#a855f761] text-gray-900 border-t-[2rem] border-indigo-300 rounded-t-full"
+      className="w-full py-8 max-md:pb-[6rem] max-md:pt-[2rem] bg-gradient-to-r from-[#60a5fa69] to-[#a855f761] text-gray-900 border-t-[2rem] border-indigo-300 rounded-t-full"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}

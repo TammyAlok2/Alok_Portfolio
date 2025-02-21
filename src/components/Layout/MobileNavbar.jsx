@@ -26,7 +26,7 @@ const MobileNavbar = () => {
                     label="About"
                     isActive={activeTab === 'about'}
                     onClick={() => handleTabChange('about')}
-                    href="#about"
+                    href="/#about"
                 />
                 <AddButton />
                 <NavItem
@@ -34,14 +34,14 @@ const MobileNavbar = () => {
                     label="Services"
                     isActive={activeTab === 'services'}
                     onClick={() => handleTabChange('services')}
-                    href="#services"
+                    href="/#services"
                 />
                 <NavItem
                     icon={<IoMailOutline size={20} />}
                     label="Contact"
                     isActive={activeTab === 'contact'}
                     onClick={() => handleTabChange('contact')}
-                    href="#contact"
+                    href="/#contact"
                 />
             </div>
         </div>

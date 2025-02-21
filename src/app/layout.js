@@ -15,7 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export async function generateMetadata({ params }) {
-  const siteUrl = "http://localhost:3000";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://pavan-updated-portfolio.vercel.app";
+  console.log(siteUrl)
 
   const longTitle = "Frontend Developer | React, Next.js & UI/UX Specialist - Pavan Prajapati";
 const description = "Experienced Frontend Developer specializing in React, Next.js, and Tailwind CSS. Crafting high-performance, responsive websites with a focus on user experience and modern web development best practices.";

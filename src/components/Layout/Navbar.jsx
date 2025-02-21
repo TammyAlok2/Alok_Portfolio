@@ -24,7 +24,7 @@ const Navbar = () => {
 
     // Navigation Items stored in an Array
     const navItems = [
-        { name: "Home", path: "/" },
+        { name: "Home", path: "/#home" },
         { name: "About", path: "/#about" },
         { name: "Services", path: "/#services" },
         { name: "Projects", path: "/#projects" },
@@ -35,7 +35,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className={`max-md:hidden px-6 py-4 fixed left-0 right-0 bg-white z-[100] ${isScrolled ? "shadow-md" : ""}`}>
+            <nav className={`max-md:hidden px-6 py-4 fixed left-0 right-0 bg-white z-[100] ${isScrolled ? "shadow-md" : ""}`} id='home'>
                 <div className="max-w-7xl mx-auto flex justify-between items-center">
                     <Link href="/">
                         <div className="flex items-center space-x-2">

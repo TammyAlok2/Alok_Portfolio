@@ -19,7 +19,7 @@ const MobileNavbar = () => {
                     label="Home"
                     isActive={activeTab === 'home'}
                     onClick={() => handleTabChange('home')}
-                    href="/"
+                    href="/#home"
                 />
                 <NavItem
                     icon={<IoInformationCircleOutline size={20} />}
@@ -28,7 +28,7 @@ const MobileNavbar = () => {
                     onClick={() => handleTabChange('about')}
                     href="/#about"
                 />
-                <AddButton />
+                <AddButton isActive={activeTab === 'add'} onClick={()=> handleTabChange('add')}/>
                 <NavItem
                     icon={<IoBriefcaseOutline size={20} />}
                     label="Services"
@@ -50,22 +50,32 @@ const MobileNavbar = () => {
 
 const NavItem = ({ icon, label, isActive, onClick, href }) => {
     return (
-        <Link href={href} className="flex flex-col items-center" onClick={onClick}>
-            <div className={`p-1 ${isActive ? 'text-purple-600' : 'text-gray-500'}`}>
+        <Link 
+            href={href} 
+            className="flex flex-col items-center" 
+            onClick={(e) => {
+                onClick();
+                // If it's an anchor link, don't prevent default
+                if (!href.startsWith('/#')) {
+                    e.preventDefault();
+                }
+            }}
+        >
+            <div className={`p-1 transition-all duration-300 ease-in-out ${isActive ? 'text-purple-600 border-[.2rem] border-purple-600 relative bottom-3 rounded-full bg-purple-100' : 'text-gray-500'}`}>
                 {icon}
             </div>
-            <span className={`text-xs mt-1 ${isActive ? 'text-purple-600' : 'text-gray-500'}`}>
+            <span className={`text-xs mt-1 ${isActive ? 'font-medium text-purple-600' : 'text-gray-500'}`}>
                 {label}
             </span>
         </Link>
     );
 };
 
-const AddButton = () => {
+const AddButton = ({isActive, onClick}) => {
     return (
-        <div className="flex flex-col items-center -mt-6">
+        <div className="flex flex-col items-center -mt-6" onClick={onClick}>
             <Link href="/resume">
-                <div className="bg-purple-600 rounded-full p-3 text-white shadow-lg">
+                <div className={`bg-purple-600 rounded-full p-3 text-white shadow-lg ${isActive ? 'border-[.3rem] border-white relative bottom-1 transition-all duration-300 ease-in-out' : ''}`}>
                     <IoDocumentText size={24} />
                 </div>
             </Link>

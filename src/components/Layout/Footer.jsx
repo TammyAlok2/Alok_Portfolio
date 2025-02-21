@@ -47,7 +47,7 @@ const Footer = () => {
         </motion.p>
         
         <motion.div 
-          className="flex space-x-6 mb-6"
+          className="flex space-x-6 mb-6 relative left-[-.8rem]"
           variants={itemVariants}
         >
           <Link href="https://github.com/Pavanpraja" className="hover:text-blue-400 transition-colors duration-300">

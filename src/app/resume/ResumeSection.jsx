@@ -14,7 +14,7 @@ const ResumeSection = () => {
             className="relative"
         >
             <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full blur-2xl opacity-20 dark:opacity-40"></div>
-            <div className='max-w-[50%] h-[50vh] max-md:h-[20vh] overflow-hidden mx-auto my-[4rem] group relative border-b-[1rem] border border-indigo-300 rounded-xl'>
+            <div className='w-[50%] h-[50vh] max-md:h-[31vh] max-md:w-[90%] overflow-hidden mx-auto my-[4rem] group relative border-b-[1rem] border border-indigo-300 rounded-xl'>
                 <Link href={"https://drive.google.com/file/d/15GbuUmHEPh5A19H2CNwupB-VFj5NQyGv/view"}>
                     <Image width={1800} height={1800} src={"/resume/resume.png"} alt='resume' />
                     <div className="absolute inset-0 bg-gradient-to-r from-[#60a5fa69] to-[#a855f761] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">

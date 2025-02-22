@@ -68,7 +68,7 @@ const Footer = () => {
         </motion.div>
         
         <motion.div 
-          className="text-sm text-gray-700"
+          className="text-sm text-gray-700 dark:text-gray-300"
           variants={itemVariants}
         >
           © {currentYear} Your Name. All rights reserved.

@@ -66,7 +66,7 @@ const Navbar = () => {
             {showScrollButton && (
                 <button
                     onClick={scrollToTop}
-                    className="fixed bottom-5 right-5 max-md:bottom-[5rem] bg-indigo-600 text-white p-3 active:scale-95 dark:border-[.1rem] dark:border-gray-300 rounded-full shadow-lg hover:bg-indigo-700 transition-all duration-300"
+                    className="fixed bottom-5 right-5 max-md:bottom-[5rem] z-[10000] bg-indigo-600 text-white p-3 active:scale-95 dark:border-[.1rem] dark:border-gray-300 rounded-full shadow-lg hover:bg-indigo-700 transition-all duration-300"
                 >
                     <FaArrowUp size={20} />
                 </button>

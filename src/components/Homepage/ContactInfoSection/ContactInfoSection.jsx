@@ -92,7 +92,7 @@ export default function ContactInfoSection() {
             className="space-y-6"
           >
             <Card>
-              <CardContent className="p-6">
+              <CardContent className="p-6 dark:border-gray-300 border-[.1rem]">
                 <h3 className="text-2xl font-semibold mb-6">Send Me a Message</h3>
                 <form className="space-y-4" action="https://formsubmit.co/a09d451665ae435cf961b6e9d24d903f"
                   method="POST">

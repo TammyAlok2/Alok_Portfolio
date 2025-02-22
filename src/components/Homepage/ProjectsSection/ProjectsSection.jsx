@@ -52,21 +52,22 @@ const ProjectsSection = () => {
                     className="text-center mb-16"
                 >
                     <h2 className="text-4xl font-bold mb-4 text-[#3a59eb]">Featured Projects</h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto">
+                    <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
                         Showcase of my latest work and projects across different domains
                     </p>
                 </motion.div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map((project, index) => (
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-md:flex max-md:flex-col max-md:w-full">
+                    {projects?.map((project, index) => (
                         <motion.div
                             key={project.id}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
+                            className=''
                         >
                             <Card
-                                className="cursor-pointer group hover:shadow-xl transition-all duration-300 max-md:w-[80%]"
+                                className="cursor-pointer group hover:shadow-xl transition-all duration-300 dark:bg-[#1f2937]"
                                 onClick={() => setSelectedProject(project)}
                             >
                                 <CardContent className="p-0">
@@ -76,7 +77,7 @@ const ProjectsSection = () => {
                                         height={500}
                                             src={project.image}
                                             alt={project.title}
-                                            className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                                            className="aspect-auto group-hover:scale-105 transition-transform duration-300"
                                         />
                                         <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                             <span className="text-white font-medium">View Project</span>
@@ -85,12 +86,12 @@ const ProjectsSection = () => {
                                     <div className="p-6">
                                         <span className="text-sm text-emerald-600 font-medium">{project.category}</span>
                                         <h3 className="text-xl font-bold mt-2 mb-3 truncate">{project.title}</h3>
-                                        <p className="text-gray-600">{project.description}</p>
+                                        <p className="text-gray-600 dark:text-gray-400">{project.description}</p>
                                         <div className="flex flex-wrap gap-2 mt-4">
                                             {project.tech.slice(3).map((tech) => (
                                                 <span
                                                     key={tech}
-                                                    className="text-sm bg-indigo-100 px-3 py-1 rounded-full"
+                                                    className="text-sm bg-indigo-100 dark:bg-[#6366f1] px-3 py-1 rounded-full"
                                                 >
                                                     {tech}
                                                 </span>

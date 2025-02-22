@@ -12,7 +12,7 @@ const MobileNavbar = () => {
     };
 
     return (
-        <div className="fixed bottom-0 left-0 right-0 bg-white dark:bg-[#212121] rounded-t-xl border-t-[.2rem] border-gray-300 shadow-lg z-50">
+        <div className="fixed bottom-0 left-0 right-0 bg-white dark:bg-[#2a1861b8] rounded-t-xl border-t-[.2rem] border-gray-300 shadow-lg z-50">
             <div className="flex justify-around items-center py-2">
                 <NavItem
                     icon={<IoHomeOutline size={20} />}

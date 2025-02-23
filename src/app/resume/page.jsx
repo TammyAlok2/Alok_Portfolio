@@ -2,6 +2,7 @@ import React from "react";
 import ResumeSection from "./ResumeSection";
 
 export async function generateMetadata() {
+  
   const siteUrl =
     process.env.NEXT_PUBLIC_SITE_URL ||
     "https://pavan-updated-portfolio.vercel.app";

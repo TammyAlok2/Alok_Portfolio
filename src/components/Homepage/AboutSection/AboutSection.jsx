@@ -100,7 +100,7 @@ export default function AboutSection() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.6 + index * 0.2, duration: 0.5 }}
-                            className="bg-white p-6 rounded-lg shadow-lg dark:bg-gray-800"
+                            className="bg-white p-6 rounded-lg shadow-lg dark:bg-gray-800 border-b-[.5rem] border-[#00000018] dark:border-[#bababa29]"
                         >
                             <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{skill.title}</h3>
                             <p className="text-gray-600 dark:text-gray-300">{skill.description}</p>

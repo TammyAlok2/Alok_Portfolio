@@ -62,7 +62,7 @@ export const ServicesSection = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white dark:bg-[#1f2937] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-white dark:bg-[#1f2937] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border-b-[.5rem] border-[#00000018] dark:border-[#bababa29]"
             >
               <div className={`${service.bgColor} w-16 h-16 rounded-xl flex items-center justify-center mb-6`}>
                 {service.icon}

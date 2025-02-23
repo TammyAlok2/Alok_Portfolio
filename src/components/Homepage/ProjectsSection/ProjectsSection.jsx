@@ -100,7 +100,7 @@ const ProjectsSection = () => {
               className=""
             >
               <Card
-                className="cursor-pointer group hover:shadow-xl transition-all duration-300 dark:bg-[#1f2937]"
+                className="cursor-pointer group hover:shadow-xl transition-all duration-300 dark:bg-[#1f2937] border-b-[.5rem] border-[#00000018] dark:border-[#bababa29]"
                 onClick={() => setSelectedProject(project)}
               >
                 <CardContent className="p-0">

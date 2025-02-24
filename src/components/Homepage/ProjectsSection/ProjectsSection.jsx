@@ -100,7 +100,7 @@ const ProjectsSection = () => {
               className=""
             >
               <Card
-                className="cursor-pointer group hover:shadow-xl transition-all duration-300 dark:bg-[#1f2937] border-b-[.5rem] border-[#00000018] dark:border-[#bababa29]"
+                className="cursor-pointer group hover:shadow-xl hover:border-[#3a59eb] transition-all duration-500 dark:bg-[#1f2937] border-l-[.5rem] border-[#00000018] dark:border-[#bababa29] ease-in-out"
                 onClick={() => setSelectedProject(project)}
               >
                 <CardContent className="p-0">
@@ -112,8 +112,8 @@ const ProjectsSection = () => {
                       alt={project.title}
                       className="aspect-auto group-hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <span className="text-white font-medium">
+                    <div className="absolute inset-0 bg-[#3a5beb8f] opacity-0 group-hover:opacity-100 w-0 group-hover:w-full duration-300 flex items-center justify-center transition-all ease-in-out">
+                      <span className="text-white font-semibold text-2xl">
                         View Project
                       </span>
                     </div>
@@ -152,14 +152,14 @@ const ProjectsSection = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/50 z-[1000] flex items-center justify-center p-4"
+              className="fixed inset-0 bg-[#f1f1f13b] backdrop-blur-[4px] z-[1000] flex items-center justify-center p-4"
               onClick={() => setSelectedProject(null)}
             >
               <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
-                className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] max-md:max-h-[68vh] dark:bg-black overflow-y-auto"
+                className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] border-[#a7a7a781] hover:border-[#3a59eb] border-l-[.5rem] max-md:max-h-[68vh] dark:bg-black overflow-y-auto transition-all duration-500 ease-in-out"
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="relative">

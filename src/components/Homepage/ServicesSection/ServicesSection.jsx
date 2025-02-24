@@ -10,7 +10,7 @@ const services = [
     description:
       "Create intuitive and engaging user experiences that delight your customers and drive results.",
     icon: <Layout className="w-8 h-8 text-emerald-600" />,
-    bgColor: "bg-emerald-100",
+    bgColor: "emerald-100",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const services = [
     description:
       "Build fast, responsive, and scalable web applications using modern technologies.",
     icon: <Code className="w-8 h-8 text-blue-600" />,
-    bgColor: "bg-blue-100",
+    bgColor: "blue-100",
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const services = [
     description:
       "Develop cohesive brand identities that communicate your values and connect with your audience.",
     icon: <Palette className="w-8 h-8 text-purple-600" />,
-    bgColor: "bg-purple-100",
+    bgColor: "purple-100",
   },
 ];
 
@@ -62,9 +62,9 @@ export const ServicesSection = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white dark:bg-[#1f2937] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border-b-[.5rem] border-[#00000018] dark:border-[#bababa29]"
+              className={`bg-white dark:bg-[#1f2937] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border-b-[.5rem] border-[#00000018] dark:border-[#bababa29]`}
             >
-              <div className={`${service.bgColor} w-16 h-16 rounded-xl flex items-center justify-center mb-6`}>
+              <div className={`bg-${service.bgColor} w-16 h-16 rounded-xl flex items-center justify-center mb-6`}>
                 {service.icon}
               </div>
               <h3 className="text-xl font-bold mb-4">{service.title}</h3>

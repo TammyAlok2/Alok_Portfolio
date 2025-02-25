@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { FaArrowUp } from 'react-icons/fa';
-import DarkModeToggle from '../DarkModeToggle';
+import DarkModeToggle from '../common/DarkModeToggle';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);

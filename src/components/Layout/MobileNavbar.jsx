@@ -38,11 +38,11 @@ const MobileNavbar = () => {
           href="/#home"
         />
         <NavItem
-          icon={<FaBriefcase size={20} />}
-          label="Experience"
-          isActive={activeTab === "experience"}
-          onClick={() => handleTabChange("experience")}
-          href="/experience"
+          icon={<GiSkills size={20} />}
+          label="Skills"
+          isActive={activeTab === "skills"}
+          onClick={() => handleTabChange("skills")}
+          href="/#skills"
         />
         <AddButton
           isActive={activeTab === "add"}
@@ -72,7 +72,7 @@ const MobileNavbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.3 }}
-            className="absolute bottom-20 left-0 right-4 flex justify-center items-center gap-6 mb-4"
+            className="absolute bottom-20 left-0 right-7 flex justify-center items-center gap-6 mb-4"
           >
             <Link href={"/#projects"}>
               <ExpandedButton
@@ -85,15 +85,15 @@ const MobileNavbar = () => {
                 onClick={() => handleTabChange("projects")}
               />
             </Link>
-            <Link href={"/#skills"}>
+            <Link href={"/experience"}>
               <ExpandedButton
-                icon={<GiSkills size={20} />}
+                icon={<FaBriefcase size={20} />}
                 className={`${
-                  activeTab === "skills"
+                  activeTab === "experience"
                     ? "text-purple-600 border-[.2rem] border-purple-600 relative bottom-1 rounded-full bg-purple-100"
                     : "dark:bg-black dark:text-white border-[.1rem] dark:border-white bg-white text-black border-black"
                 } : `}
-                onClick={() => handleTabChange("skills")}
+                onClick={() => handleTabChange("experience")}
               />
             </Link>
             <Link href={"/resume"}>
@@ -121,10 +121,6 @@ const NavItem = ({ icon, label, isActive, onClick, href }) => {
       className="flex flex-col items-center"
       onClick={(e) => {
         onClick();
-        // If it's an anchor link, don't prevent default
-        if (!href.startsWith("/#")) {
-          e.preventDefault();
-        }
       }}
     >
       <div

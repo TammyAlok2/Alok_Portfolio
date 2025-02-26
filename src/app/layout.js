@@ -25,7 +25,7 @@ export async function generateMetadata({ params }) {
   const description =
     "Experienced Frontend Developer specializing in React, Next.js, and Tailwind CSS. Crafting high-performance, responsive websites with a focus on user experience and modern web development best practices.";
   const keywords =
-    "Frontend Developer, React Developer, Next.js, UI/UX Specialist, Web Development, Tailwind CSS, JavaScript, TypeScript, Responsive Design, Pavan Prajapati Portfolio, Pavan Prajapati, Modern Web Development, On-page SEO";
+    "Frontend Developer, React Developer, Next.js, UI/UX Specialist, Web Development, Tailwind CSS, JavaScript, TypeScript, Responsive Design, Pavan Prajapati, Pavan Prajapati Portfolio, Modern Web Development, On-page SEO";
 
   const truncateTitle = (title, maxLength = 60) => {
     return title.length > maxLength

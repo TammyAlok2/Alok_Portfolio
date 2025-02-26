@@ -1,7 +1,7 @@
 import { experiences } from "@/data/heroSectionData";
 import { FaBriefcase } from "react-icons/fa";
 
-export default function BestExperience() { 
+export default function BestExperience() {  
   return (
     <div className="max-w-4xl mx-auto pb-12 pt-[6rem] px-6">
       <div className="relative border-l-4 border-[#4f46e5] pl-6">

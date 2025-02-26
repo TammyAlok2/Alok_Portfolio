@@ -6,17 +6,14 @@ import {
   IoBriefcaseOutline,
   IoDocumentText,
   IoHomeOutline,
-  IoInformationCircleOutline,
   IoMailOutline,
   IoCloseOutline,
-  IoCameraOutline,
-  IoMicOutline,
-  IoHeadsetOutline,
 } from "react-icons/io5";
 import { motion, AnimatePresence } from "framer-motion";
 import { RxCross2 } from "react-icons/rx";
 import { GrProjects } from "react-icons/gr";
 import { GiSkills } from "react-icons/gi";
+import { FaBriefcase } from "react-icons/fa";
 
 const MobileNavbar = () => {
   const [activeTab, setActiveTab] = useState("home");
@@ -41,11 +38,11 @@ const MobileNavbar = () => {
           href="/#home"
         />
         <NavItem
-          icon={<IoInformationCircleOutline size={20} />}
-          label="About"
-          isActive={activeTab === "about"}
-          onClick={() => handleTabChange("about")}
-          href="/#about"
+          icon={<FaBriefcase size={20} />}
+          label="Experience"
+          isActive={activeTab === "experience"}
+          onClick={() => handleTabChange("experience")}
+          href="/experience"
         />
         <AddButton
           isActive={activeTab === "add"}

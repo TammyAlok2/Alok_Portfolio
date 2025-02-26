@@ -26,7 +26,7 @@ const Navbar = () => {
     // Navigation Items stored in an Array
     const navItems = [
         { name: "Home", path: "/#home" },
-        { name: "About", path: "/#about" },
+        { name: "Experience", path: "/experience" },
         { name: "Services", path: "/#services" },
         { name: "Projects", path: "/#projects" },
         { name: "Skills", path: "/#skills" },

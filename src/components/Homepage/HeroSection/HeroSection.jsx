@@ -1,22 +1,12 @@
 'use client';
 
 import React from 'react';
-import { Download, Github, Instagram, Linkedin } from 'lucide-react';
+import { Github, Instagram, Linkedin } from 'lucide-react';
 import Image from 'next/image';
-import { FaReact, FaPaintBrush, FaSearch, FaServer } from "react-icons/fa";
-import { BiCodeAlt } from "react-icons/bi";
-import { MdDeveloperMode } from "react-icons/md";
 import { motion } from "framer-motion";
 import Link from 'next/link';
 import { FlipWords } from '@/components/ui/flip-words';
-
-const experiences = [
-  { name: "3y+ React.js Development", position: "right-[25rem] top-4 max-md:right-0 max-[1134px]:right-[20rem]", icon: <FaReact className=" text-black dark:text-gray-300" size={24} /> },
-  { name: "2y+ Next.js & TypeScript", position: "top-12 right-[-1rem] max-md:right-0 max-md:top-12 max-[1024px]:top-3", icon: <MdDeveloperMode className=" text-black dark:text-gray-300" size={24} /> },
-  { name: "4y+ UI/UX & Tailwind CSS", position: "right-[-3rem] bottom-[-11rem] max-md:right-0 max-md:bottom-[-9rem] max-[1354px]:right-0  max-[1354px]:bottom-[-15rem]", icon: <FaPaintBrush className=" text-black dark:text-gray-300" size={24} /> },
-  { name: "3y+ JavaScript & ES6+", position: "top-[4rem] right-[23rem] max-md:right-0 max-md:top-[2rem] max-[1134px]:right-[17rem]", icon: <BiCodeAlt className=" text-black dark:text-gray-300" size={24} /> },
-  { name: "1.5y+ On Page Optimization", position: "right-[28rem] bottom-[-10rem] max-md:right-0 max-md:bottom-[-8rem] max-[1134px]:right-[20rem]", icon: <FaSearch className=" text-black dark:text-gray-300" size={24} /> },
-];
+import { experiences } from '@/data/heroSectionData';
 
 const HeroSection = () => {
   const words = ["Frontend Developer", "Innovative", "Responsive Design Expert", "JavaScript Enthusiast", "UI/UX Specialist"];
@@ -73,9 +63,9 @@ const HeroSection = () => {
         >
           <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full blur-2xl opacity-20 dark:opacity-40"></div>
           <Image
-            width={350}
-            height={350}
-            src="/herosection/profile.jpg"
+            width={450}
+            height={450}
+            src="/aboutsection/about.png"
             alt="Designer Portrait"
             className="z-[-1] relative opacity-[.8] aspect-auto max-md:w-[80%]"
           />

@@ -1,12 +1,12 @@
-import { experiences } from "@/data/heroSectionData";
+import { experiences } from "@/data/experienceSectionData";
 import { FaBriefcase } from "react-icons/fa";
 
 export default function BestExperience() {  
   
   return (
-    <div className="max-w-4xl mx-auto pb-12 pt-[6rem] px-6">
+    <div className="pb-12 pt-[6rem] px-6">
       <div className="relative border-l-4 border-[#4f46e5] pl-6">
-        {experiences.map((exp) => (
+        {Array.isArray(experiences) && experiences?.map((exp) => (
           <div key={exp.id} className="mb-8">
             <div className="absolute -left-6 bg-[#4f46e5] text-white p-3 rounded-full">
               <FaBriefcase size={20} />

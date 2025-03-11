@@ -62,7 +62,7 @@ const Footer = () => {
         </div>
 
         <div className="text-sm text-gray-700 dark:text-gray-300">
-          © {currentYear} Your Name. All rights reserved.
+          © {currentYear} Pavan Prajapati. All rights reserved.
         </div>
       </div>
     </motion.footer>

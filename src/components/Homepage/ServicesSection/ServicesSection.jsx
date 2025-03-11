@@ -37,7 +37,7 @@ export const ServicesSection = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`bg-white dark:bg-[#1f2937] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border-b-[.5rem] border-[#00000018] dark:border-[#bababa29]`}
             >
-              <div className={`bg-${service.bgColor} w-16 h-16 rounded-xl flex items-center justify-center mb-6`}>
+              <div key={service.id} className={`w-16 h-16 rounded-xl flex items-center justify-center mb-6 ${service.bgColor}`}>
                 {service.icon}
               </div>
               <h3 className="text-xl font-bold mb-4">{service.title}</h3>

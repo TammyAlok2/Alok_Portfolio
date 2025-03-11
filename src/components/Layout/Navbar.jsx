@@ -41,7 +41,7 @@ const Navbar = () => {
                     <Link href="/">
                         <div className="flex items-center space-x-2">
                             <div className="w-12 h-12 bg-[#dbeafe] rounded-full flex items-center text-2xl text-indigo-600 shadow-md border font-bold justify-center">PP</div>
-                            <span className="font-semibold text-2xl tracking-[.03rem]">Portfolio</span>
+                            <span className="font-semibold text-2xl tracking-[.03rem] dark:text-white">Portfolio</span>
                         </div>
                     </Link>
 

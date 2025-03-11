@@ -69,7 +69,7 @@ const HeroSection = () => {
         </div>
 
         {/* Description */}
-        <div className="rounded-lg max-w-md">
+        <div className="rounded-lg max-w-md dark:text-gray-400">
           As a Frontend Developer, I specialize in building responsive, user-centric, and high-performance web applications.
         </div>
 

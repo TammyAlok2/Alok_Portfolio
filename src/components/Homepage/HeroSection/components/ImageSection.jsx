@@ -1,9 +1,8 @@
 import React from "react";
 import Image from 'next/image';
 import { motion } from "framer-motion";
-import { experiences } from '@/data/heroSectionData';
 
-const ImageSection = () => {
+const ImageSection = ({experiences}) => {
   return (
     <div className="w-full md:w-1/2 relative mt-10 md:mt-0 max-[1024px]:left-[22rem] max-[768px]:left-0">
       <motion.div

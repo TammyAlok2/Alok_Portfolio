@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
 import MobileNavbar from "@/components/Layout/MobileNavbar";
+import MouseMove from "@/components/common/CustomMouseMove/MouseMove";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -77,6 +78,7 @@ export default function RootLayout({ children }) {
       >
         <Navbar />
         <div className="max-w-7xl mx-auto pt-[4rem] max-md:pt-0 max-md:overflow-x-hidden">
+          <MouseMove />
           {children}
           <div className="md:hidden">
             {" "}

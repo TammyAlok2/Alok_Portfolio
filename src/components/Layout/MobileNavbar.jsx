@@ -21,10 +21,20 @@ const MobileNavbar = () => {
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
+    playClickSound();
   };
 
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
+    playClickSound();
+  };
+
+  const playClickSound = () => {
+    if (typeof window !== "undefined") {
+      const clickSound = new Audio("/click.mp3");
+      clickSound.currentTime = 0; // Reset sound for instant replay
+      clickSound.play();
+    }
   };
 
   return (

@@ -8,6 +8,7 @@ import { navItems } from "@/data/navbarData";
 import useScroll from "@/hooks/useScroll";
 
 const ScrollToTopButton = ({ showScrollButton, scrollToTop }) => {
+
   return (
     <>
       {showScrollButton && (
@@ -69,7 +70,10 @@ const Navbar = () => {
       </nav>
 
       {/* Scroll to Top Button */}
-      <ScrollToTopButton showScrollButton={showScrollButton} scrollToTop={scrollToTop}/>
+      <ScrollToTopButton
+        showScrollButton={showScrollButton}
+        scrollToTop={scrollToTop}
+      />
     </>
   );
 };

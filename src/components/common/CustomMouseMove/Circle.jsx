@@ -6,7 +6,7 @@ const Circle = forwardRef((props, ref) => {
   return (
     <div
         ref={ref}
-        className="h-[1rem] w-[1rem] rounded-full bg-[#444ee7] shadow-xl z-[10000] flex items-center justify-center text-black font-bold transition-transform duration-50 ease-out animate-fire"
+        className="h-[1rem] max-md:hidden w-[1rem] rounded-full bg-[#444ee7] shadow-xl z-[10000] flex items-center justify-center text-black font-bold transition-transform duration-50 ease-out animate-fire"
       style={{
         position: "fixed", // Moves freely with cursor
         pointerEvents: "none", // Prevents interference

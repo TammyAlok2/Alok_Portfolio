@@ -1,6 +1,10 @@
 "use client";
+
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
+
+// Click sound effect
+const clickSound = new Audio("/click.mp3"); // Add a "click.mp3" file in your public folder
 
 export default function DarkModeToggle() {
   const [isDark, setIsDark] = useState(false);
@@ -19,11 +23,18 @@ export default function DarkModeToggle() {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
       setIsDark(false);
+      playClickSound();
     } else {
       document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
       setIsDark(true);
+      playClickSound();
     }
+  };
+
+  const playClickSound = () => {
+    clickSound.currentTime = 0; // Reset sound for instant replay
+    clickSound.play();
   };
 
   return (

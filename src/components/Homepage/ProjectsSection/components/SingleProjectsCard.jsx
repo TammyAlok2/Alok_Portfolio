@@ -1,9 +1,19 @@
+'use client';
+
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ExternalLink } from "lucide-react";
 import Image from "next/image";
 
 const SingleProjectsCard = ({ selectedProject, setSelectedProject }) => {
+  const handleCloseProject = (project) => {
+    if (typeof window !== "undefined") {
+      const clickCloseSound = new Audio("/close-click.mp3");
+      clickCloseSound.play();
+    }
+    setSelectedProject(project);
+  };
+
   return (
     <AnimatePresence>
       {selectedProject && (
@@ -30,7 +40,7 @@ const SingleProjectsCard = ({ selectedProject, setSelectedProject }) => {
                 className="w-full h-84 aspect-auto rounded-t-2xl"
               />
               <button
-                onClick={() => setSelectedProject(null)}
+                onClick={() => handleCloseProject(null)}
                 className="absolute top-4 right-4 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
               >
                 <X size={20} />

@@ -1,3 +1,5 @@
+'use client';
+
 import React from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
@@ -5,6 +7,13 @@ import { projects } from "@/data/projectsSectionData";
 import Image from "next/image";
 
 const ProjectsCards = ({ setSelectedProject }) => {
+  const handleProjectClick = (project) => {
+    if (typeof window !== "undefined") {
+      const clickSound = new Audio("/current-click.mp3"); // Place the sound file in the public folder
+      clickSound.play();
+    }
+    setSelectedProject(project);
+  };
   return (
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-md:flex max-md:flex-col max-md:w-full">
       {projects?.map((project, index) => (
@@ -17,7 +26,7 @@ const ProjectsCards = ({ setSelectedProject }) => {
         >
           <Card
             className="cursor-pointer group hover:shadow-xl hover:border-[#3a59eb] transition-all duration-500 dark:bg-[#1f2937] border-l-[.5rem] border-[#00000018] dark:border-[#bababa29] ease-in-out"
-            onClick={() => setSelectedProject(project)}
+            onClick={() => handleProjectClick(project)}
           >
             <CardContent className="p-0">
               <div className="relative overflow-hidden">

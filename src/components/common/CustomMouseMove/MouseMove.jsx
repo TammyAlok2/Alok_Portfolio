@@ -44,7 +44,7 @@ const MouseMove = () => {
           initial={{ scale: 0, opacity: 1 }}
           animate={{ scale: 5, opacity: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="absolute rounded-full bg-[#444ee7] shadow-xl z-[10000]"
+          className="absolute rounded-full bg-[#444ee7] shadow-xl z-[10000] max-md:hidden"
           style={{
             width: "2rem",
             height: "2rem",

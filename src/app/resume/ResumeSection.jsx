@@ -2,14 +2,15 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 
 const ResumeSection = () => {
+  const resumeClickSound = useRef(null);
   const handleResumeClick = () => {
     if (typeof window !== "undefined") {
-      let resumeClickSound = new Audio("/current-click.mp3");
-      resumeClickSound.play();
+      resumeClickSound.current = new Audio("/current-click.mp3");
+      resumeClickSound.current.play();
     }
   };
   return (

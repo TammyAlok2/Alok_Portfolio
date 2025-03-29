@@ -4,7 +4,6 @@ import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 
 // Click sound effect
-const clickSound = new Audio("/click.mp3"); // Add a "click.mp3" file in your public folder
 
 export default function DarkModeToggle() {
   const [isDark, setIsDark] = useState(false);
@@ -33,8 +32,11 @@ export default function DarkModeToggle() {
   };
 
   const playClickSound = () => {
-    clickSound.currentTime = 0; // Reset sound for instant replay
-    clickSound.play();
+    if (typeof window !== "undefined") {
+      const clickSound = new Audio("/click.mp3"); // Add a "click.mp3" file in your public folder
+      clickSound.currentTime = 0; // Reset sound for instant replay
+      clickSound.play();
+    }
   };
 
   return (
@@ -42,9 +44,9 @@ export default function DarkModeToggle() {
       onClick={toggleDarkMode}
       className="relative w-12 h-7 rounded-full bg-gray-200 dark:bg-gray-700 transition-all duration-1000 ease-in-out mt-[-0.3rem]"
     >
-       <div
+      <div
         className={`absolute top-1 ${
-          isDark ? 'right-1 rotate-[360deg]' : 'left-1 rotate-[-360deg]'
+          isDark ? "right-1 rotate-[360deg]" : "left-1 rotate-[-360deg]"
         } w-5 h-5 rounded-full bg-white dark:bg-gray-800 transition-all duration-1000 ease-in-out flex items-center justify-center`}
       >
         {isDark ? (

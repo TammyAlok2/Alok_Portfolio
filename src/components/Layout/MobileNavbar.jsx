@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import {
   IoBriefcaseOutline,
@@ -14,28 +13,11 @@ import { RxCross2 } from "react-icons/rx";
 import { GrProjects } from "react-icons/gr";
 import { GiSkills } from "react-icons/gi";
 import { FaBriefcase } from "react-icons/fa";
+import useMobileNavbar from "@/hooks/useMobileNavbar";
 
 const MobileNavbar = () => {
-  const [activeTab, setActiveTab] = useState("home");
-  const [isExpanded, setIsExpanded] = useState(false);
 
-  const handleTabChange = (tab) => {
-    setActiveTab(tab);
-    playClickSound();
-  };
-
-  const toggleExpand = () => {
-    setIsExpanded(!isExpanded);
-    playClickSound();
-  };
-
-  const playClickSound = () => {
-    if (typeof window !== "undefined") {
-      const clickSound = new Audio("/click.mp3");
-      clickSound.currentTime = 0; // Reset sound for instant replay
-      clickSound.play();
-    }
-  };
+  const { isExpanded, activeTab, handleTabChange, toggleExpand } = useMobileNavbar();
 
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-white dark:bg-black rounded-t-xl border-t-[.2rem] border-gray-300 shadow-lg z-50">

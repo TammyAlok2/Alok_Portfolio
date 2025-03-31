@@ -19,7 +19,7 @@ export async function generateMetadata({ params }) {
   const siteUrl =
     process.env.NEXT_PUBLIC_SITE_URL ||
     "https://pavan-updated-portfolio.vercel.app";
-  console.log(siteUrl);
+  // console.log(siteUrl);
 
   const longTitle =
     "Frontend Developer | React, Next.js & UI/UX Specialist - Pavan Prajapati";

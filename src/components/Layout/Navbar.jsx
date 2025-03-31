@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { FaArrowUp } from "react-icons/fa";
 import DarkModeToggle from "../common/DarkModeToggle";
 import { navItems } from "@/data/navbarData";

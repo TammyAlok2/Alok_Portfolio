@@ -46,7 +46,7 @@ const Navbar = () => {
               <span className="font-semibold text-2xl tracking-[.03rem] dark:text-white">
                 Portfolio
               </span> */}
-              <Image height={100} width={100} src={"/New_logo.png"} alt="logo" className="ml-4" />
+              <Image height={100} width={100} src={"/New_logo.png"} alt="logo" className="ml-4 max-md:w-[6rem]" />
             </div>
           </Link>
 

@@ -6,6 +6,7 @@ import { FaArrowUp } from "react-icons/fa";
 import DarkModeToggle from "../common/DarkModeToggle";
 import { navItems } from "@/data/navbarData";
 import useScroll from "@/hooks/useScroll";
+import Image from "next/image";
 
 const ScrollToTopButton = ({ showScrollButton, scrollToTop }) => {
 
@@ -39,12 +40,13 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <Link href="/">
             <div className="flex items-center space-x-2">
-              <div className="w-12 h-12 bg-[#dbeafe] rounded-full flex items-center text-2xl text-indigo-600 shadow-md border font-bold justify-center">
+              {/* <div className="w-12 h-12 bg-[#dbeafe] rounded-full flex items-center text-2xl text-indigo-600 shadow-md border font-bold justify-center">
                 PP
               </div>
               <span className="font-semibold text-2xl tracking-[.03rem] dark:text-white">
                 Portfolio
-              </span>
+              </span> */}
+              <Image height={100} width={100} src={"/New_logo.png"} alt="logo" className="ml-4" />
             </div>
           </Link>
 

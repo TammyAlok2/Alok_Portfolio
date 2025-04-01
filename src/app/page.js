@@ -38,14 +38,7 @@ export default function Home() {
             className="mb-6 text-gray-500 [text-shadow:0.05rem_0.05rem_.05rem_lightgray] text-xs"
           >
             <Link href="/">
-              <div className="flex items-center space-x-2">
-                <div className="w-12 h-12 bg-[#dbeafe] rounded-full flex items-center text-2xl text-indigo-600 shadow-md border font-bold justify-center">
-                  PP
-                </div>
-                <span className="font-semibold text-2xl tracking-[.03rem]">
-                  Portfolio
-                </span>
-              </div>
+            <Image height={120} width={120} src={"/New_logo.png"} alt="logo" className="mb-[-2rem] w-[10rem]" />
             </Link>
           </motion.div>
 

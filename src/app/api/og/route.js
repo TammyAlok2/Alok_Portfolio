@@ -8,7 +8,7 @@ export async function GET(request) {
         // Correctly construct the image URL using the request origin
         const baseUrl = new URL(request.url).origin;
         // console.log("baseUrl: ", baseUrl)
-        const imageUrl = `${baseUrl}/og/og_background.png`;
+        const imageUrl = `${baseUrl}/New_logo.png`;
  
         return new ImageResponse(
             (

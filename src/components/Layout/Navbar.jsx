@@ -30,9 +30,9 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`px-6 py-4 fixed left-0 right-0 bg-white dark:bg-black z-[100] ${
+        className={`px-6 py-1 max-md:pb-1 max-md:pt-2 fixed left-0 right-0 bg-white dark:bg-black z-[100] ${
           isScrolled
-            ? "shadow-md dark:bg-[#2a1861b8] dark:backdrop-blur-[1rem] border-b-[.2rem] rounded-b-xl border-gray-300"
+            ? "max-md:hidden shadow-md dark:bg-[#2a1861b8] dark:backdrop-blur-[1rem] border-b-[.2rem] rounded-b-xl border-gray-300"
             : ""
         }`}
         id="home"
@@ -46,7 +46,8 @@ const Navbar = () => {
               <span className="font-semibold text-2xl tracking-[.03rem] dark:text-white">
                 Portfolio
               </span> */}
-              <Image height={100} width={100} src={"/New_logo.png"} alt="logo" className="ml-4" />
+              <Image height={80} width={80} src={"/New_logo.png"} alt="logo" className="ml-4 dark:hidden max-md:w-[5rem]" />
+              <Image height={80} width={80} src={"/New_dark_logo.png"} alt="logo" className="hidden ml-4 dark:block max-md:w-[5rem]" />
             </div>
           </Link>
 

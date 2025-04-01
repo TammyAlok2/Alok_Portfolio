@@ -10,7 +10,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Typewriter from 'typewriter-effect';
+import Typewriter from "typewriter-effect";
 
 export default function Home() {
   const [showContent, setShowContent] = useState(true);
@@ -26,7 +26,7 @@ export default function Home() {
 
     return () => clearTimeout(timer);
   }, []);
-  
+
   return (
     <>
       {showContent ? (
@@ -38,7 +38,20 @@ export default function Home() {
             className="mb-6 text-gray-500 [text-shadow:0.05rem_0.05rem_.05rem_lightgray] text-xs"
           >
             <Link href="/">
-            <Image height={120} width={120} src={"/New_logo.png"} alt="logo" className="mb-[-2rem] w-[10rem]" />
+              <Image
+                height={120}
+                width={120}
+                src={"/New_logo.png"}
+                alt="logo"
+                className="mb-[-2rem] w-[10rem] dark:hidden"
+              />
+              <Image
+                height={120}
+                width={120}
+                src={"/New_dark_logo.png"}
+                alt="logo"
+                className="hidden mb-[-2rem] w-[10rem] dark:block"
+              />
             </Link>
           </motion.div>
 
@@ -50,9 +63,7 @@ export default function Home() {
           >
             <Typewriter
               options={{
-                strings: [
-                  "Hello! Welcome to My Portfolio 🚀",
-                ],
+                strings: ["Hello! Welcome to My Portfolio 🚀"],
                 autoStart: true,
                 loop: true,
                 delay: 75,

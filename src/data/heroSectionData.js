@@ -1,1 +1,1 @@
-export const words = ["Frontend Developer", "Innovative", "Responsive Design Expert", "JavaScript Enthusiast", "UI/UX Specialist"];
+export const words = ["Full Stack Developer", "Innovative", "MERN STACK LEARNER", "GEN AI Enthusiast", "Python Programmer","Backend Lover ❤❤"];

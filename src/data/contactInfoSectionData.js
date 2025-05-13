@@ -4,17 +4,17 @@ export const contactInfo = [
   {
     icon: <MapPin className="w-5 h-5" />,
     title: "Location",
-    details: ["Gopal Tola Nagod District Satna, (M.P), India"],
+    details: ["Mangawan Basti Dist.Rewa, (M.P), India"],
   },
   {
     icon: <Mail className="w-5 h-5" />,
     title: "Email",
-    details: ["pp3850064@gmail.com"],
+    details: ["aloktamrakar2@gmail.com"],
   },
   {
     icon: <Phone className="w-5 h-5" />,
     title: "Phone",
-    details: ["+91 6264360870"],
+    details: ["+91 9644905810"],
   },
 ];
 

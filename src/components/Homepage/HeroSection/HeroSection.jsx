@@ -38,7 +38,7 @@ const HeroSection = () => {
     icon: <BiCodeAlt className=" text-black dark:text-gray-300" size={24} />,
   },
   {
-    name: "On Page Optimization",
+    name: "Python Devlopment ",
     position:
       "right-[28rem] bottom-[-10rem] max-md:right-0 max-md:bottom-[-8rem] max-[1134px]:right-[20rem]",
     icon: <FaSearch className=" text-black dark:text-gray-300" size={24} />,
@@ -52,7 +52,7 @@ const HeroSection = () => {
         {/* Greeting */}
         <div className="bg-indigo-100 dark:bg-indigo-500 text-indigo-700 dark:text-indigo-100 inline-block px-4 py-2 rounded-full relative">
           <div className='w-3 h-3 bg-indigo-200 rounded-full absolute animate-ping left-[4px]'></div>
-          Hi everyone 👋 I'm Pavan
+          Hi everyone 👋 I'm Alok 
         </div>
 
         {/* Main Heading */}
@@ -61,12 +61,12 @@ const HeroSection = () => {
         </div>
 
         <div className="space-y-1 font-bold text-[2.2rem] [text-shadow:0.02rem_0.01rem_0.02rem_black] w-[90%] min-[768px]:hidden">
-          <h1>Frontend Developer</h1>
+          <h1>Full Stack Developer</h1>
         </div>
 
         {/* Description */}
         <div className="rounded-lg max-w-md dark:text-gray-400">
-          As a Frontend Developer, I specialize in building responsive, user-centric, and high-performance web applications.
+          As a Full Stack Developer, I specialize in creating dynamic and responsive web applications using React.js, Next.js, and Tailwind CSS. My passion lies in crafting seamless user experiences and optimizing performance.
         </div>
 
         {/* Social Links */}

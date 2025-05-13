@@ -1,6 +1,6 @@
 export const socialLinks = [
   {
-    href: "https://github.com/Pavanpraja",
+    href: "https://github.com/TammyAlok2",
     icon: (
       <svg
         className="w-6 h-6"
@@ -17,7 +17,7 @@ export const socialLinks = [
     ),
   },
   {
-    href: "https://www.linkedin.com/in/pavan-prajapati-8a348626b/",
+    href: "https://www.linkedin.com/in/alok-tamrakar-89a71a199/",
     icon: (
       <svg
         className="w-6 h-6"
@@ -30,7 +30,7 @@ export const socialLinks = [
     ),
   },
   {
-    href: "https://x.com/pp3850064",
+    href: "https://x.com/AlokTamrak12342",
     icon: (
       <svg
         className="w-6 h-6"

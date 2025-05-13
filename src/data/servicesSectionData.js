@@ -3,7 +3,7 @@ import { Layout, Code, Palette } from "lucide-react";
 export const services = [
     {
       id: 1,
-      title: "UI/UX Design",
+      title: "Software Development and Deployment",
       description:
         "Create intuitive and engaging user experiences that delight your customers and drive results.",
       icon: <Layout className="w-8 h-8 text-white" />,
@@ -11,17 +11,17 @@ export const services = [
     },
     {
       id: 2,
-      title: "Web Development",
+      title: "Backend Development",
       description:
-        "Build fast, responsive, and scalable web applications using modern technologies.",
+        "Build fast, responsive, and scalable backend applications  using modern technologies.",
       icon: <Code className="w-8 h-8 text-white" />,
       bgColor: "bg-black",
     },
     {
       id: 3,
-      title: "Brand Design",
+      title: "Gen AI Integration",
       description:
-        "Develop cohesive brand identities that communicate your values and connect with your audience.",
+        "Integration of modern chatbot using langchain,NLP and other AI Products in development.",
       icon: <Palette className="w-8 h-8 text-white" />,
       bgColor: "bg-black",
     },

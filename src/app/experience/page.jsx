@@ -5,11 +5,11 @@ export async function generateMetadata() {
     process.env.NEXT_PUBLIC_SITE_URL ||
     "https://pavan-updated-portfolio.vercel.app";
 
-  const title = "Experience - Pavan Prajapati";
+  const title = "Experience - Alok Tamrakar";
   const description =
-    "Explore the professional journey of Pavan Prajapati. Frontend Developer with expertise in React, Next.js, and UI/UX design.";
+    "Explore the professional journey of Alok Tamrakar. Frontend Developer with expertise in React, Next.js, and UI/UX design.";
   const keywords =
-    "Frontend Developer, Work Experience, React Developer, Next.js, UI/UX, Web Development, Pavan Prajapati Portfolio";
+    "Frontend Developer, Work Experience, React Developer, Next.js, UI/UX, Web Development, Alok Tamrakar Portfolio";
 
   return {
     metadataBase: new URL(siteUrl),

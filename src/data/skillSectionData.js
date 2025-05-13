@@ -50,4 +50,7 @@ export const technologies = [
     { name: "Redux", percentage: 80, color: "bg-purple-600" },
     { name: "Zustand", percentage: 85, color: "bg-purple-600" },
     { name: "On-page SEO", percentage: 70, color: "bg-blue-300" },
+    {name:"Python", percentage: 70, color: "bg-blue-300"},
+    {name:"Django", percentage: 70, color: "bg-blue-300"},
+    {name:"FastApi", percentage: 70, color: "bg-blue-300"},
   ];

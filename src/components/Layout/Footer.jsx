@@ -36,7 +36,7 @@ const Footer = () => {
         </div>
 
         <div className="text-sm text-gray-700 dark:text-gray-300">
-          © {currentYear} Pavan Prajapati. All rights reserved.
+          © {currentYear} Alok Tamrakar. All rights reserved.
         </div>
       </div>
     </motion.footer>

@@ -27,7 +27,7 @@ const ResumeSection = () => {
       >
         <Link
           href={
-            "https://drive.google.com/file/d/1Z9ZjNctqdOC6xV6odO1IhzL-dZRUW27K/view?usp=sharing"
+            "https://drive.google.com/file/d/1cxK5lkTRIQ8GSXP2OW1m4Ad0vu26S6Yd/view?usp=sharing"
           }
         >
           <Image

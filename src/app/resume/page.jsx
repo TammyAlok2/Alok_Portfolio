@@ -11,7 +11,7 @@ export async function generateMetadata() {
   const description =
     "Check out my resume showcasing my skills, experience, and achievements. Click to view...";
   const keywords =
-    "Frontend Developer Resume, React Developer, Next.js Developer, UI/UX Designer, Web Developer Portfolio, JavaScript, TypeScript, Tailwind CSS, Modern Web Development, Pavan Prajapati Resume";
+    "Frontend Developer Resume, React Developer, Next.js Developer, UI/UX Designer, Web Developer Portfolio, JavaScript, TypeScript, Tailwind CSS, Modern Web Development, Alok Tamrakar Resume";
 
   return {
     title,

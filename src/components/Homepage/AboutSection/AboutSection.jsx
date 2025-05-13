@@ -38,14 +38,13 @@ export default function AboutSection() {
                             About Me
                         </motion.h1>
                         <motion.p {...fadeIn(0.4)} className="text-lg text-gray-600 dark:text-gray-300">
-                            Hi, I'm Pavan Prajapati, a passionate frontend web developer with over 4 years of experience in creating beautiful and functional web applications. 
-                            I specialize in React, Next.JS, Tailwind CSS, On-page Optimization and multimore core technologies or Ai tools.
+                            Hi, I'm Alok Tamrakar, a passionate Full Stack Developer with a knack for creating dynamic and responsive web applications. I specialize in using React.js, Next.js, and Tailwind CSS to build user-friendly interfaces and seamless user experiences. My goal is to leverage technology to solve real-world problems and make a positive impact through my work.
                         </motion.p>
                         <motion.div {...fadeIn(0.6)} className="flex space-x-4">
                             {[
-                                { href: "https://github.com/Pavanpraja", icon: Github },
-                                { href: "https://www.linkedin.com/in/pavan-prajapati-8a348626b/", icon: Linkedin },
-                                { href: "https://x.com/pp3850064", icon: Twitter },
+                                { href: "https://github.com/TammyAlok2", icon: Github },
+                                { href: "https://www.linkedin.com/in/alok-tamrakar-89a71a199/", icon: Linkedin },
+                                { href: "https://x.com/AlokTamrak12342", icon: Twitter },
                             ].map(({ href, icon: Icon }, index) => (
                                 <Link key={index} href={href} className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">
                                     <Icon size={24} />

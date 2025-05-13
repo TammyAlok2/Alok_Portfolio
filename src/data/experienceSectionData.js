@@ -7,7 +7,7 @@ export const experiences = [
     title: "Full Stack Developer",
     company: "Kryx.AI - Internship",
     years: "Feb 2025 - Present",
-    location: "Satna, Madhya Pradesh, India · On-site",
+    location: "Banglore ,Karnataka -Remote ",
     icon: <FaLaptopCode size={20} />, // Icon for developer role
     details: [
       "Spearheaded migration from legacy codebase to modern Next.js architecture, improving scalability and increasing developer productivity by 35%.",
